@@ -1,6 +1,7 @@
 import 'package:args/args.dart';
 import 'package:args/command_runner.dart';
 import 'package:cli_completion/cli_completion.dart';
+import 'package:flakka_cli/src/commands/build_command.dart';
 import 'package:flakka_cli/src/commands/commands.dart';
 import 'package:flakka_cli/src/version.dart';
 import 'package:mason_logger/mason_logger.dart';
@@ -40,6 +41,7 @@ class FlakkaCliCommandRunner extends CompletionCommandRunner<int> {
 
     // Add sub commands
     addCommand(SampleCommand(logger: _logger));
+    addCommand(BuildCommand(logger: _logger));
     addCommand(UpdateCommand(logger: _logger, pubUpdater: _pubUpdater));
   }
 
