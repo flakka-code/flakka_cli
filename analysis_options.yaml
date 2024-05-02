@@ -6,3 +6,4 @@ analyzer:
   exclude:
     - "**/version.dart"
     - "bricks/**/__brick__"
+    - "tool/**/__brick__"

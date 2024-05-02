@@ -14,7 +14,13 @@ void main() {
       addTearDown(() => tempDirectory.deleteSync(recursive: true));
 
       final result = await commandRunner.run(
-        ['create', 'flakka_dart_package', 'flakka_dart', '-o', tempDirectory.path],
+        [
+          'create',
+          'flakka_dart_package',
+          'flakka_dart',
+          '-o',
+          tempDirectory.path
+        ],
       );
       expect(result, equals(ExitCode.success.code));
 
