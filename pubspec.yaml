@@ -9,6 +9,8 @@ environment:
 dependencies:
   args: ^2.4.2
   cli_completion: ^0.5.0
+  flakka_build:
+    git: https://github.com/flakka-code/flakka_build
   flakka_build_runner:
     git: https://github.com/flakka-code/flakka_build_runner
   mason:
