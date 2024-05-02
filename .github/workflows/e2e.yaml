@@ -39,7 +39,7 @@ jobs:
 #          # E2E tests for the create command
 #          - test/commands/create/flutter_app/core_test.dart
 #          - test/commands/create/dart_cli/dart_cli_test.dart
-          - test/commands/create/dart_package/dart_pkg_test.dart
+          - test/commands/create/flakka_dart_package/flakka_dart_pkg_test.dart
 #          - test/commands/create/docs_site/docs_site_test.dart
 #          # FIXME(alestiago): Re-enable once the following issue has been solved:
 #          # https://github.com/VeryGoodOpenSource/very_good_flame_game/issues/132

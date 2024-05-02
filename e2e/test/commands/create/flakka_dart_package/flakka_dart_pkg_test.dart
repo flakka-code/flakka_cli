@@ -14,11 +14,11 @@ void main() {
       addTearDown(() => tempDirectory.deleteSync(recursive: true));
 
       final result = await commandRunner.run(
-        ['create', 'dart_package', 'very_good_dart', '-o', tempDirectory.path],
+        ['create', 'flakka_dart_package', 'flakka_dart', '-o', tempDirectory.path],
       );
       expect(result, equals(ExitCode.success.code));
 
-      final workingDirectory = path.join(tempDirectory.path, 'very_good_dart');
+      final workingDirectory = path.join(tempDirectory.path, 'flakka_dart');
 
       // add coverage to collect coverage on dart test
       await expectSuccessfulProcessResult(
