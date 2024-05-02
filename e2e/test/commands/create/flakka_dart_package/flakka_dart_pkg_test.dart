@@ -7,7 +7,7 @@ import '../../../../helpers/helpers.dart';
 
 void main() {
   test(
-    'create dart_package',
+    'create flakka_dart_package',
     timeout: const Timeout(Duration(minutes: 2)),
     withRunner((commandRunner, logger, updater, logs) async {
       final tempDirectory = Directory.systemTemp.createTempSync();

@@ -9,6 +9,8 @@ import 'package:flakka_cli/src/version.dart';
 import 'package:mason_logger/mason_logger.dart';
 import 'package:pub_updater/pub_updater.dart';
 
+import 'commands/create/create.dart';
+
 const executableName = 'flakka_cli';
 const packageName = 'flakka_cli';
 const description = 'A CLI for developing flakka projects';
@@ -44,6 +46,7 @@ class FlakkaCliCommandRunner extends CompletionCommandRunner<int> {
       );
 
     // Add sub commands
+    addCommand(CreateCommand(logger: _logger));
     addCommand(SampleCommand(logger: _logger));
     addCommand(BuildCommand(logger: _logger));
     addCommand(UpdateCommand(logger: _logger, pubUpdater: _pubUpdater));
