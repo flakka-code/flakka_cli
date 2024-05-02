@@ -1,5 +1,6 @@
 import 'package:args/command_runner.dart';
-import 'package:flakka_build_runner/flakka_build_runner.dart'as flakka_build_runner;
+import 'package:flakka_build_runner/flakka_build_runner.dart'
+    as flakka_build_runner;
 import 'package:mason_logger/mason_logger.dart';
 // import 'package:result_monad/result_monad.dart';
 

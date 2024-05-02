@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:mason/mason.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:pub_updater/pub_updater.dart';
-import 'package:very_good_cli/src/command_runner.dart';
+import 'package:flakka_cli/src/command_runner.dart';
 
 class _MockLogger extends Mock implements Logger {}
 
@@ -28,7 +28,7 @@ void Function() _overridePrint(void Function(List<String>) fn) {
 
 void Function() withRunner(
   FutureOr<void> Function(
-    VeryGoodCommandRunner commandRunner,
+    FlakkaCliCommandRunner commandRunner,
     Logger logger,
     PubUpdater pubUpdater,
     List<String> printLogs,
