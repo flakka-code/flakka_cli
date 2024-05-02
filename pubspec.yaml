@@ -13,20 +13,22 @@ dependencies:
     git: https://github.com/flakka-code/flakka_build
   flakka_build_runner:
     git: https://github.com/flakka-code/flakka_build_runner
-  mason:
+  mason: ^0.1.0-dev.53
   mason_logger: ^0.2.12
-  package_config:
+  meta: ^1.14.0
+  package_config: ^2.1.0
+  path: ^1.9.0
   pub_updater: ^0.4.0
-  result_monad:
-  universal_io:
+#  result_monad:
+  universal_io: ^2.2.2
 dev_dependencies:
   build_runner: ^2.4.8
   build_verify: ^3.1.0
   build_version: ^2.1.1
   mocktail: ^1.0.3
-  test:
+  test: ^1.25.4
   very_good_analysis: ^5.1.0
-  very_good_cli:
+  very_good_cli: ^0.21.0
 
 
 executables:
