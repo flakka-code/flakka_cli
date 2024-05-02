@@ -9,15 +9,32 @@ environment:
 dependencies:
   args: ^2.4.2
   cli_completion: ^0.5.0
+  collection: ^1.17.1
+  equatable: ^2.0.5
+  glob: ^2.0.2
+  lcov_parser: ^0.1.2
+
+  flakka_build: ^0.1.2-alpha.3
+  flakka_build_runner: ^0.1.2-alpha.5
+  mason: ^0.1.0-dev.53
   mason_logger: ^0.2.12
+  meta: ^1.14.0
+  package_config: ^2.1.0
+  path: ^1.9.0
+  pana: 0.22.3 # Very Good CLI is using private PANA's license detector that might break in a minor version update.
   pub_updater: ^0.4.0
+  pubspec_parse: ^1.2.0
+  stack_trace: ^1.10.0
+  universal_io: ^2.0.4
+  very_good_test_runner: ^0.2.0
+  yaml: ^3.1.2
 
 dev_dependencies:
-  build_runner: ^2.4.8
+  build_runner: ^2.4.6
   build_verify: ^3.1.0
   build_version: ^2.1.1
-  mocktail: ^1.0.3
-  test: ^1.25.2
+  mocktail: ^1.0.0
+  test: ^1.24.3
   very_good_analysis: ^5.1.0
 
 executables:

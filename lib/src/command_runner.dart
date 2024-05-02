@@ -1,7 +1,10 @@
+import 'dart:io';
+
 import 'package:args/args.dart';
 import 'package:args/command_runner.dart';
 import 'package:cli_completion/cli_completion.dart';
 import 'package:flakka_cli/src/commands/commands.dart';
+import 'package:flakka_cli/src/commands/create/create.dart';
 import 'package:flakka_cli/src/version.dart';
 import 'package:mason_logger/mason_logger.dart';
 import 'package:pub_updater/pub_updater.dart';
@@ -22,8 +25,10 @@ class FlakkaCliCommandRunner extends CompletionCommandRunner<int> {
   FlakkaCliCommandRunner({
     Logger? logger,
     PubUpdater? pubUpdater,
+    Map<String, String>? environment,
   })  : _logger = logger ?? Logger(),
         _pubUpdater = pubUpdater ?? PubUpdater(),
+        _environment = environment ?? Platform.environment,
         super(executableName, description) {
     // Add root options and flags
     argParser
@@ -39,7 +44,9 @@ class FlakkaCliCommandRunner extends CompletionCommandRunner<int> {
       );
 
     // Add sub commands
+    addCommand(CreateCommand(logger: _logger));
     addCommand(SampleCommand(logger: _logger));
+    addCommand(BuildCommand(logger: _logger));
     addCommand(UpdateCommand(logger: _logger, pubUpdater: _pubUpdater));
   }
 
@@ -48,6 +55,10 @@ class FlakkaCliCommandRunner extends CompletionCommandRunner<int> {
 
   final Logger _logger;
   final PubUpdater _pubUpdater;
+
+  /// Map of environments information.
+  Map<String, String> get environment => environmentOverride ?? _environment;
+  final Map<String, String> _environment;
 
   @override
   Future<int> run(Iterable<String> args) async {
