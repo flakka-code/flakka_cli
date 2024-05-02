@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:args/args.dart';
 import 'package:args/command_runner.dart';
 import 'package:cli_completion/cli_completion.dart';
@@ -23,8 +25,10 @@ class FlakkaCliCommandRunner extends CompletionCommandRunner<int> {
   FlakkaCliCommandRunner({
     Logger? logger,
     PubUpdater? pubUpdater,
+    Map<String, String>? environment,
   })  : _logger = logger ?? Logger(),
         _pubUpdater = pubUpdater ?? PubUpdater(),
+        _environment = environment ?? Platform.environment,
         super(executableName, description) {
     // Add root options and flags
     argParser
@@ -50,6 +54,10 @@ class FlakkaCliCommandRunner extends CompletionCommandRunner<int> {
 
   final Logger _logger;
   final PubUpdater _pubUpdater;
+
+  /// Map of environments information.
+  Map<String, String> get environment => environmentOverride ?? _environment;
+  final Map<String, String> _environment;
 
   @override
   Future<int> run(Iterable<String> args) async {

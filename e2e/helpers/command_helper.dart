@@ -1,9 +1,9 @@
 import 'dart:async';
 
+import 'package:flakka_cli/src/command_runner.dart';
 import 'package:mason/mason.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:pub_updater/pub_updater.dart';
-import 'package:flakka_cli/src/command_runner.dart';
 
 class _MockLogger extends Mock implements Logger {}
 
@@ -39,7 +39,7 @@ void Function() withRunner(
     final progress = _MockProgress();
     final pubUpdater = _MockPubUpdater();
     final progressLogs = <String>[];
-    final commandRunner = VeryGoodCommandRunner(
+    final commandRunner = FlakkaCliCommandRunner(
       logger: logger,
       pubUpdater: pubUpdater,
       environment: {'CI': 'true'},
