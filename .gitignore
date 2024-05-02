@@ -16,3 +16,4 @@ coverage/
 .flutter-plugins
 .flutter-plugins-dependencies
 .flutter-plugins
+pubspec_overrides.yaml

@@ -1,5 +1,0 @@
-dependency_overrides:
-  flakka_build:
-    path: ../flakka_build
-  flakka_build_runner:
-    path: ../flakka_build_runner
