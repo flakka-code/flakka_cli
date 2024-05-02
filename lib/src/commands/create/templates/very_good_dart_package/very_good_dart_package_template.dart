@@ -1,7 +1,7 @@
-import 'package:mason/mason.dart';
-import 'package:universal_io/io.dart';
 import 'package:flakka_cli/src/commands/create/templates/templates.dart';
 import 'package:flakka_cli/src/logger_extension.dart';
+import 'package:mason/mason.dart';
+import 'package:universal_io/io.dart';
 
 /// {@template dart_pkg_template}
 /// A Dart package template.

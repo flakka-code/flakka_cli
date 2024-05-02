@@ -1,8 +1,8 @@
+import 'package:flakka_cli/src/commands/create/templates/templates.dart';
+import 'package:flakka_cli/src/logger_extension.dart';
 import 'package:mason/mason.dart';
 import 'package:path/path.dart' as path;
 import 'package:universal_io/io.dart';
-import 'package:flakka_cli/src/commands/create/templates/templates.dart';
-import 'package:flakka_cli/src/logger_extension.dart';
 
 /// {@template very_good_core_template}
 /// A core Flutter app template.

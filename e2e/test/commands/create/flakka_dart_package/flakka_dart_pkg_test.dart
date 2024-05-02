@@ -19,7 +19,7 @@ void main() {
           'flakka_dart_package',
           'flakka_dart',
           '-o',
-          tempDirectory.path
+          tempDirectory.path,
         ],
       );
       expect(result, equals(ExitCode.success.code));

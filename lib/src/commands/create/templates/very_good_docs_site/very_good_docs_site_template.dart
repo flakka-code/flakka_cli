@@ -1,8 +1,8 @@
 import 'dart:io';
 
-import 'package:mason/mason.dart';
 import 'package:flakka_cli/src/commands/create/templates/templates.dart';
 import 'package:flakka_cli/src/logger_extension.dart';
+import 'package:mason/mason.dart';
 
 /// {@template docs_site_template}
 /// A documentation site template.

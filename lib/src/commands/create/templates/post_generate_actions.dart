@@ -1,6 +1,6 @@
+import 'package:flakka_cli/src/cli/cli.dart';
 import 'package:mason/mason.dart';
 import 'package:universal_io/io.dart';
-import 'package:flakka_cli/src/cli/cli.dart';
 
 /// Runs `dart pub get` in the [outputDir].
 ///

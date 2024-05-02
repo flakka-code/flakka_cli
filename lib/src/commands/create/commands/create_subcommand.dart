@@ -3,11 +3,11 @@ import 'dart:io';
 
 import 'package:args/args.dart';
 import 'package:args/command_runner.dart';
+import 'package:flakka_cli/src/commands/create/create.dart';
+import 'package:flakka_cli/src/commands/create/templates/templates.dart';
 import 'package:mason/mason.dart';
 import 'package:meta/meta.dart';
 import 'package:path/path.dart' as path;
-import 'package:flakka_cli/src/commands/commands.dart';
-import 'package:flakka_cli/src/commands/create/templates/templates.dart';
 
 // A valid Dart identifier that can be used for a package, i.e. no
 // capital letters.
