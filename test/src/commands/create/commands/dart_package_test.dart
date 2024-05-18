@@ -1,11 +1,11 @@
 import 'dart:io';
 
 import 'package:args/args.dart';
+import 'package:flakka_cli/src/commands/commands.dart';
 import 'package:mason/mason.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:path/path.dart' as path;
 import 'package:test/test.dart';
-import 'package:flakka_cli/src/commands/commands.dart';
 
 import '../../../../helpers/helpers.dart';
 
