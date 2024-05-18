@@ -5,5 +5,5 @@ linter:
 analyzer:
   exclude:
     - "**/version.dart"
-    - "bricks/**/__brick__"
+    - "bricks"
     - "tool/**/__brick__"
