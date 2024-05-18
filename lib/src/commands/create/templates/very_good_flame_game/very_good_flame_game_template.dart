@@ -27,7 +27,7 @@ class VeryGoodFlameGameTemplate extends Template {
   void _logSummary(Logger logger) {
     logger
       ..info('\n')
-      ..created('Created a Very Good Game powered by Flame! 🔥🦄')
+      ..created('Created a Very Good Game powered by Flame! 🔥')
       ..info('\n');
   }
 }

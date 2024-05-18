@@ -26,7 +26,7 @@ class FlutterPluginTemplate extends Template {
   void _logSummary(Logger logger) {
     logger
       ..info('\n')
-      ..created('Created a Very Good Flutter Plugin! 🦄')
+      ..created('Created a Very Good Flutter Plugin! ')
       ..info('\n');
   }
 }

@@ -27,7 +27,7 @@ class VeryGoodWearAppTemplate extends Template {
   void _logSummary(Logger logger) {
     logger
       ..info('\n')
-      ..created('Created a Very Good Wear OS app! ⌚️🦄')
+      ..created('Created a Very Good Wear OS app! ⌚️')
       ..info('\n');
   }
 }

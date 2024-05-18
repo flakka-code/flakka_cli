@@ -24,7 +24,7 @@ class VeryGoodDocsSiteTemplate extends Template {
   void _logSummary(Logger logger) {
     logger
       ..info('\n')
-      ..created('Created a Very Good documentation site! 🦄')
+      ..created('Created a Very Good documentation site! ')
       ..info('\n');
   }
 }

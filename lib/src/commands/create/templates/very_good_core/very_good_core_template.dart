@@ -45,7 +45,7 @@ class VeryGoodCoreTemplate extends Template {
 
     logger
       ..info('\n')
-      ..created('Created a Very Good App! 🦄')
+      ..created('Created a Very Good App! ')
       ..info(details)
       ..info(
         lightGray.wrap(

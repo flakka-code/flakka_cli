@@ -26,7 +26,7 @@ class FlutterPkgTemplate extends Template {
   void _logSummary(Logger logger) {
     logger
       ..info('\n')
-      ..created('Created a Very Good Flutter Package! 🦄')
+      ..created('Created a Very Good Flutter Package! ')
       ..info('\n');
   }
 }

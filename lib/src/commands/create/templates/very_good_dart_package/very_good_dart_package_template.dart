@@ -26,7 +26,7 @@ class DartPkgTemplate extends Template {
   void _logSummary(Logger logger) {
     logger
       ..info('\n')
-      ..created('Created a Very Good Dart Package! 🦄')
+      ..created('Created a Very Good Dart Package!')
       ..info('\n');
   }
 }

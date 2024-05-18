@@ -27,7 +27,7 @@ class VeryGoodDartCLITemplate extends Template {
   void _logSummary(Logger logger) {
     logger
       ..info('\n')
-      ..created('Created a Very Good Dart CLI application! 🦄')
+      ..created('Created a Very Good Dart CLI application! ')
       ..info('\n');
   }
 }
