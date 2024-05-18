@@ -26,7 +26,7 @@ class FlakkaDartPkgTemplate extends Template {
   void _logSummary(Logger logger) {
     logger
       ..info('\n')
-      ..created('Created a Flakka Dart Package! 🦄')
+      ..created('Created a Flakka Dart Package! ')
       ..info('\n');
   }
 }

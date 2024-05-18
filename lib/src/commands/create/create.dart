@@ -16,72 +16,9 @@ class CreateCommand extends Command<int> {
     @visibleForTesting MasonGeneratorFromBundle? generatorFromBundle,
     @visibleForTesting MasonGeneratorFromBrick? generatorFromBrick,
   }) {
-    // very_good create flutter_app <args>
-    addSubcommand(
-      CreateFlutterApp(
-        logger: logger,
-        generatorFromBundle: generatorFromBundle,
-        generatorFromBrick: generatorFromBrick,
-      ),
-    );
-
-    // very_good create dart_package <args>
-    addSubcommand(
-      CreateDartPackage(
-        logger: logger,
-        generatorFromBundle: generatorFromBundle,
-        generatorFromBrick: generatorFromBrick,
-      ),
-    );
-
     // very_good create dart_package <args>
     addSubcommand(
       CreateFlakkaDartPackage(
-        logger: logger,
-        generatorFromBundle: generatorFromBundle,
-        generatorFromBrick: generatorFromBrick,
-      ),
-    );
-
-    // very_good create dart_cli <args>
-    addSubcommand(
-      CreateDartCLI(
-        logger: logger,
-        generatorFromBundle: generatorFromBundle,
-        generatorFromBrick: generatorFromBrick,
-      ),
-    );
-
-    // very_good create docs_site <args>
-    addSubcommand(
-      CreateDocsSite(
-        logger: logger,
-        generatorFromBundle: generatorFromBundle,
-        generatorFromBrick: generatorFromBrick,
-      ),
-    );
-
-    // very_good create flutter_package <args>
-    addSubcommand(
-      CreateFlutterPackage(
-        logger: logger,
-        generatorFromBundle: generatorFromBundle,
-        generatorFromBrick: generatorFromBrick,
-      ),
-    );
-
-    // very_good create flutter_plugin <args>
-    addSubcommand(
-      CreateFlutterPlugin(
-        logger: logger,
-        generatorFromBundle: generatorFromBundle,
-        generatorFromBrick: generatorFromBrick,
-      ),
-    );
-
-    // very_good create flame_game <args>
-    addSubcommand(
-      CreateFlameGame(
         logger: logger,
         generatorFromBundle: generatorFromBundle,
         generatorFromBrick: generatorFromBrick,

@@ -1,3 +1,0 @@
-class Thing {
-  const Thing();
-}
