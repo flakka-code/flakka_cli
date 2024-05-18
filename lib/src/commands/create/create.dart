@@ -16,7 +16,6 @@ class CreateCommand extends Command<int> {
     @visibleForTesting MasonGeneratorFromBundle? generatorFromBundle,
     @visibleForTesting MasonGeneratorFromBrick? generatorFromBrick,
   }) {
-
     // very_good create dart_package <args>
     addSubcommand(
       CreateDartPackage(
@@ -34,7 +33,6 @@ class CreateCommand extends Command<int> {
         generatorFromBrick: generatorFromBrick,
       ),
     );
-
   }
 
   @override
