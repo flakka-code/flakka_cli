@@ -22,5 +22,5 @@ class CreateFlakkaDartPackage extends CreateSubCommand with Publishable {
   String get description => 'Generate a Very Good Dart package.';
 
   @override
-  Template get template => DartPkgTemplate();
+  Template get template => FlakkaDartPkgTemplate();
 }

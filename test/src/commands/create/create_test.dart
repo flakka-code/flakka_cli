@@ -11,7 +11,6 @@ Usage: very_good create <subcommand> <project-name> [arguments]
 -h, --help    Print this usage information.
 
 Available subcommands:
-  dart_package          Generate a Very Good Dart package.
   flakka_dart_package   Generate a Very Good Dart package.
 
 Run "flakka_cli help" to see global options.'''

@@ -28,7 +28,7 @@ final expectedUsage = [
   '''
 Generate a Very Good Dart package.
 
-Usage: flakka_cli create dart_package <project-name> [arguments]
+Usage: flakka_cli create flakka_dart_package <project-name> [arguments]
 -h, --help                Print this usage information.
 -o, --output-directory    The desired output directory when creating a new project.
     --description         The description for this new project.
@@ -63,12 +63,12 @@ void main() {
   group('can be instantiated', () {
     test('with default options', () {
       final logger = Logger();
-      final command = CreateDartPackage(
+      final command = CreateFlakkaDartPackage(
         logger: logger,
         generatorFromBundle: null,
         generatorFromBrick: null,
       );
-      expect(command.name, equals('dart_package'));
+      expect(command.name, equals('flakka_dart_package'));
       expect(
         command.description,
         equals(
@@ -80,19 +80,19 @@ void main() {
     });
   });
 
-  group('create dart_package', () {
+  group('create flakka_dart_package', () {
     test(
       'help',
       withRunner((commandRunner, logger, pubUpdater, printLogs) async {
-        final result =
-            await commandRunner.run(['create', 'dart_package', '--help']);
+        final result = await commandRunner
+            .run(['create', 'flakka_dart_package', '--help']);
         expect(printLogs, equals(expectedUsage));
         expect(result, equals(ExitCode.success.code));
 
         printLogs.clear();
 
         final resultAbbr =
-            await commandRunner.run(['create', 'dart_pkg', '-h']);
+            await commandRunner.run(['create', 'flakka_dart_pkg', '-h']);
         expect(printLogs, equals(expectedUsage));
         expect(resultAbbr, equals(ExitCode.success.code));
       }),
@@ -158,7 +158,7 @@ void main() {
         addTearDown(() => tempDirectory.deleteSync(recursive: true));
 
         final argResults = _MockArgResults();
-        final command = CreateDartPackage(
+        final command = CreateFlakkaDartPackage(
           logger: logger,
           generatorFromBundle: (_) async => throw Exception('oops'),
           generatorFromBrick: (_) async => generator,
@@ -169,7 +169,7 @@ void main() {
 
         final result = await command.run();
 
-        expect(command.template.name, 'dart_pkg');
+        expect(command.template.name, 'flakka_dart_pkg');
         expect(result, equals(ExitCode.success.code));
 
         verify(() => logger.progress('Bootstrapping')).called(1);
@@ -195,7 +195,7 @@ void main() {
           ),
         ).called(1);
         // verify(
-        //   () => logger.info('Created a Very Good Dart Package!'),
+        //   () => logger.info('Created a Flakka Dart Package!'),
         // ).called(1);
       });
     });
